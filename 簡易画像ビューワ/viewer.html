@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>簡易画像ビューワ</title>
+<link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+<script>
+var picNo =1;
+
+function revBtnclick(){
+	document.getElementById('no').innerHTML='No.1';
+	document.getElementById('pict').src='img/1.jpg';
+	document.getElementById('no').className='no1';
+
+}
+function fwdBtnClick(){
+	picNo++
+	document.getElementById('no').innerHTML='No.'+picNo;
+	document.getElementById('pict').src='img/'+picNo+'.jpg';
+	if(picNo===4){
+
+	}
+	document.getElementById('no').className='no2';
+}
+</script>
+<img id="pict" src="img/1.jpg">
+<div id="no" class="no1">No.1</div>
+<button onclick="revBtnclick();">←</button>
+<button id="fwd_btn"onclick="fwdBtnClick();">→</button>
+</body>
+</html>
